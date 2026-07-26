@@ -7,7 +7,10 @@ recorded in [`SOURCES.tsv`](SOURCES.tsv).
 
 ## Accelerators and beam instrumentation
 
-- KEK ATF2 final-focus beamline — [PDF](atf2.pdf) · [SVG](atf2.svg)
+- KEK ATF2 final-focus beamline
+  - hero — [PDF](atf2.pdf) · [SVG](atf2.svg)
+  - engineering plan — [PDF](atf2-engineering-plan.pdf) · [SVG](atf2-engineering-plan.svg)
+  - down-beam interaction region — [PDF](atf2-downbeam.pdf) · [SVG](atf2-downbeam.svg)
 - Beam-loss ionisation chamber — [PDF](blm.pdf) · [SVG](blm.svg)
 
 ## Imaging and optical detectors
@@ -18,13 +21,19 @@ recorded in [`SOURCES.tsv`](SOURCES.tsv).
 
 ## Geometry studies
 
-- AGATA spherical honeycomb — [PDF](agata-honeycomb.pdf) · [SVG](agata-honeycomb.svg)
+- AGATA spherical honeycomb
+  - hero — [PDF](agata-honeycomb.pdf) · [SVG](agata-honeycomb.svg)
+  - oblique three-quarter view — [PDF](agata-honeycomb-oblique.pdf) · [SVG](agata-honeycomb-oblique.svg)
+  - rear lattice — [PDF](agata-honeycomb-rear.pdf) · [SVG](agata-honeycomb-rear.svg)
 - Geant4 solids zoo — [PDF](solids-zoo.pdf) · [SVG](solids-zoo.svg)
 - Five-fold polar rotor — [PDF](polar-rotor.pdf) · [SVG](polar-rotor.svg)
 
 ## Spacecraft and flight instruments
 
-- [Orion spacecraft](orion.pdf)
+- Orion spacecraft
+  - hero — [PDF](orion.pdf)
+  - axial view — [PDF](orion-axial.pdf) · [SVG](orion-axial.svg)
+  - profile — [PDF](orion-profile.pdf) · [SVG](orion-profile.svg)
 - [BepiColombo SIXS-P](sixs.pdf)
 - [Solar Orbiter HET](het.pdf)
 - [SOHO and Chandra EPHIN comparison](ephin-comparison.pdf)
