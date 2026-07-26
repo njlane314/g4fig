@@ -1,9 +1,26 @@
 # Render gallery
 
 The [complete gallery](gdml-gallery.pdf) collects every render in one PDF.
-Individual vector PDFs are linked below; the source GDML files are intentionally
-not vendored. Upstream revisions, checksums, and licences are recorded in
-[`SOURCES.tsv`](SOURCES.tsv).
+Individual PDFs and selected SVGs are linked below; the source GDML files are
+intentionally not vendored. Upstream revisions, checksums, and licences are
+recorded in [`SOURCES.tsv`](SOURCES.tsv).
+
+## Accelerators and beam instrumentation
+
+- KEK ATF2 final-focus beamline — [PDF](atf2.pdf) · [SVG](atf2.svg)
+- Beam-loss ionisation chamber — [PDF](blm.pdf) · [SVG](blm.svg)
+
+## Imaging and optical detectors
+
+- CZT pinhole gamma camera — [PDF](czt-pinhole-camera.pdf) · [SVG](czt-pinhole-camera.svg)
+- ePIC pfRICH — [PDF](epic-pfrich.pdf) · [SVG](epic-pfrich.svg)
+- ATHENA silicon-pore optics — [PDF](athena-silicon-pore.pdf) · [SVG](athena-silicon-pore.svg)
+
+## Geometry studies
+
+- AGATA spherical honeycomb — [PDF](agata-honeycomb.pdf) · [SVG](agata-honeycomb.svg)
+- Geant4 solids zoo — [PDF](solids-zoo.pdf) · [SVG](solids-zoo.svg)
+- Five-fold polar rotor — [PDF](polar-rotor.pdf) · [SVG](polar-rotor.svg)
 
 ## Spacecraft and flight instruments
 

@@ -1,0 +1,3 @@
+gallery/*.pdf binary
+gallery/*.png binary
+gallery/*.svg -diff
