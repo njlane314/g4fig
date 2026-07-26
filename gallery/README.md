@@ -59,13 +59,12 @@ recorded in [`SOURCES.tsv`](SOURCES.tsv).
   - axial detector — [PDF](cusp-axial-detector.pdf) · [SVG](cusp-axial-detector.svg)
   - scatterer array — [PDF](cusp-scatterer-array.pdf) · [SVG](cusp-scatterer-array.svg)
   - absorber array — [PDF](cusp-absorber-array.pdf) · [SVG](cusp-absorber-array.svg)
-- [BepiColombo SIXS-P](sixs.pdf)
-- [Solar Orbiter HET](het.pdf)
-- [SOHO and Chandra EPHIN comparison](ephin-comparison.pdf)
-- [SOHO EPHIN](ephin-soho.pdf)
-- [Chandra EPHIN](ephin-chandra.pdf)
-- [SOHO ERNE](erne.pdf)
-- [SOHO KET](ket.pdf)
+- G4VM flight-instrument suite — [all nineteen views](g4vm-views.md)
+  - Solar Orbiter HET — instrument oblique ([PDF](het-instrument-oblique.pdf) · [SVG](het-instrument-oblique.svg)); detector cutaway ([PDF](het-detector-cutaway.pdf) · [SVG](het-detector-cutaway.svg)); active stack ([PDF](het-active-stack.pdf) · [SVG](het-active-stack.svg)); spacecraft shielding ([PDF](het.pdf) · [SVG](het.svg)); shield cutaway ([PDF](het-shield-cutaway.pdf) · [SVG](het-shield-cutaway.svg))
+  - SOHO and Chandra EPHIN — axial ([PDF](ephin-axial.pdf) · [SVG](ephin-axial.svg)); longitudinal ([PDF](ephin-longitudinal.pdf) · [SVG](ephin-longitudinal.svg)); active stack ([PDF](ephin-active-stack.pdf) · [SVG](ephin-active-stack.svg)); SOHO shielding ([PDF](ephin-soho.pdf) · [SVG](ephin-soho.svg)); Chandra shielding ([PDF](ephin-chandra.pdf) · [SVG](ephin-chandra.svg))
+  - BepiColombo SIXS-P — instrument oblique ([PDF](sixs.pdf) · [SVG](sixs.svg)); axial ([PDF](sixs-axial.pdf) · [SVG](sixs-axial.svg)); detector core ([PDF](sixs-detector-core.pdf) · [SVG](sixs-detector-core.svg)); silicon array ([PDF](sixs-silicon-array.pdf) · [SVG](sixs-silicon-array.svg))
+  - SOHO ERNE — full instrument ([PDF](erne.pdf)); HED ([PDF](erne-hed.pdf)); LED ([PDF](erne-led.pdf))
+  - KET — full instrument ([PDF](ket.pdf) · [SVG](ket.svg)); axial ([PDF](ket-axial.pdf) · [SVG](ket-axial.svg))
 
 ## Particle detectors
 

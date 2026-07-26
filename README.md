@@ -140,6 +140,19 @@ leaving every download unchanged. SVG output is written under
 `out/cusp/views/`; when `rsvg-convert` is available, matching PDF and PNG files
 are added. See the [stacked CUSP gallery](gallery/cusp-views.md).
 
+## Example: G4VM flight instruments
+
+Render the HET, EPHIN, ERNE, KET, and SIXS flight-instrument suite:
+
+```sh
+./examples/g4vm/render.sh
+```
+
+Pass any combination of `het`, `ephin`, `erne`, `ket`, and `sixs` to select
+instruments; with no argument the script renders all five. It pins and verifies
+the 71 required downloads without vendoring their source geometry. See the
+[stacked G4VM gallery](gallery/g4vm-views.md) for all 19 canonical views.
+
 ## Track input
 
 Track rows are deliberately simple and pipe-friendly:
