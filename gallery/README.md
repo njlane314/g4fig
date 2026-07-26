@@ -1,6 +1,7 @@
 # Render gallery
 
-The [complete gallery](gdml-gallery.pdf) collects every render in one PDF.
+The [complete gallery](gdml-gallery.pdf) collects the principal renders in one
+PDF.
 Individual PDFs and selected SVGs are linked below; the source GDML files are
 intentionally not vendored. Upstream revisions, checksums, and licences are
 recorded in [`SOURCES.tsv`](SOURCES.tsv).
@@ -45,6 +46,19 @@ recorded in [`SOURCES.tsv`](SOURCES.tsv).
   - hero — [PDF](orion.pdf)
   - axial view — [PDF](orion-axial.pdf) · [SVG](orion-axial.svg)
   - profile — [PDF](orion-profile.pdf) · [SVG](orion-profile.svg)
+- CUSP CubeSat Compton polarimeter — [all twelve views](cusp-views.md)
+  - hero oblique — [PDF](cusp-hero-oblique.pdf) · [SVG](cusp-hero-oblique.svg)
+  - opposite oblique — [PDF](cusp-opposite-oblique.pdf) · [SVG](cusp-opposite-oblique.svg)
+  - high rear oblique — [PDF](cusp-high-rear-oblique.pdf) · [SVG](cusp-high-rear-oblique.svg)
+  - underside oblique — [PDF](cusp-underside-oblique.pdf) · [SVG](cusp-underside-oblique.svg)
+  - X profile — [PDF](cusp-x-profile.pdf) · [SVG](cusp-x-profile.svg)
+  - Y profile — [PDF](cusp-y-profile.pdf) · [SVG](cusp-y-profile.svg)
+  - Z axial — [PDF](cusp-z-axial.pdf) · [SVG](cusp-z-axial.svg)
+  - detector cutaway — [PDF](cusp-detector-cutaway.pdf) · [SVG](cusp-detector-cutaway.svg)
+  - side section — [PDF](cusp-side-section.pdf) · [SVG](cusp-side-section.svg)
+  - axial detector — [PDF](cusp-axial-detector.pdf) · [SVG](cusp-axial-detector.svg)
+  - scatterer array — [PDF](cusp-scatterer-array.pdf) · [SVG](cusp-scatterer-array.svg)
+  - absorber array — [PDF](cusp-absorber-array.pdf) · [SVG](cusp-absorber-array.svg)
 - [BepiColombo SIXS-P](sixs.pdf)
 - [Solar Orbiter HET](het.pdf)
 - [SOHO and Chandra EPHIN comparison](ephin-comparison.pdf)

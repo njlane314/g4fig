@@ -125,6 +125,21 @@ The script downloads and verifies only the standalone HIRAX GDML, then writes
 SVG and, when `rsvg-convert` is available, matching PDF and PNG files under
 `out/hirax/`. See the [stacked HIRAX gallery](gallery/hirax-views.md).
 
+## Example: CUSP CubeSat
+
+Render seven whole-model and five detector-detail views:
+
+```sh
+./examples/cusp/render.sh
+```
+
+The script downloads and verifies only the six files in the upstream GDML
+mass-model directory. Because the application normally defines three custom
+materials in C++, the render copy adds their source-faithful definitions while
+leaving every download unchanged. SVG output is written under
+`out/cusp/views/`; when `rsvg-convert` is available, matching PDF and PNG files
+are added. See the [stacked CUSP gallery](gallery/cusp-views.md).
+
 ## Track input
 
 Track rows are deliberately simple and pipe-friendly:

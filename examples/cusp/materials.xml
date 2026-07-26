@@ -1,0 +1,58 @@
+<!--
+  The upstream GDML bundle leaves materials.xml empty because g4cusp-rs
+  constructs these three custom materials in DetectorConstruction.cc before
+  parsing the geometry. These definitions reproduce that source at commit
+  041373e2b7c592455c21ff170019b61396bc53e0 for geometry-only rendering.
+-->
+<materials xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <element name="H" formula="H" Z="1"><atom value="1.008" unit="g/mole"/></element>
+  <element name="C" formula="C" Z="6"><atom value="12.01" unit="g/mole"/></element>
+  <element name="N" formula="N" Z="7"><atom value="14.01" unit="g/mole"/></element>
+  <element name="O" formula="O" Z="8"><atom value="16.00" unit="g/mole"/></element>
+  <element name="Al" formula="Al" Z="13"><atom value="26.98" unit="g/mole"/></element>
+  <element name="Ga" formula="Ga" Z="31"><atom value="69.72" unit="g/mole"/></element>
+  <element name="Gd" formula="Gd" Z="64"><atom value="157.25" unit="g/mole"/></element>
+
+  <material name="Al10">
+    <D value="0.2699" unit="g/cm3"/>
+    <fraction n="1.0" ref="Al"/>
+  </material>
+
+  <material name="GAGG">
+    <D value="6.63" unit="g/cm3"/>
+    <composite n="3" ref="Gd"/>
+    <composite n="2" ref="Al"/>
+    <composite n="3" ref="Ga"/>
+    <composite n="12" ref="O"/>
+  </material>
+
+  <material name="Epoxy_1">
+    <D value="1.16" unit="g/cm3"/>
+    <composite n="19" ref="C"/>
+    <composite n="20" ref="H"/>
+    <composite n="4" ref="O"/>
+  </material>
+  <material name="Epoxy_2">
+    <D value="1.10" unit="g/cm3"/>
+    <composite n="10" ref="C"/>
+    <composite n="18" ref="H"/>
+    <composite n="4" ref="O"/>
+  </material>
+  <material name="Epoxy_3">
+    <D value="1.16" unit="g/cm3"/>
+    <composite n="9" ref="C"/>
+    <composite n="22" ref="H"/>
+    <composite n="2" ref="N"/>
+  </material>
+  <material name="Epoxy_Resin">
+    <D value="1.19" unit="g/cm3"/>
+    <fraction n="0.56" ref="Epoxy_1"/>
+    <fraction n="0.24" ref="Epoxy_2"/>
+    <fraction n="0.20" ref="Epoxy_3"/>
+  </material>
+  <material name="FR4">
+    <D value="1.8" unit="g/cm3"/>
+    <fraction n="0.60" ref="G4_SILICON_DIOXIDE"/>
+    <fraction n="0.40" ref="Epoxy_Resin"/>
+  </material>
+</materials>
