@@ -20,13 +20,25 @@ geometry recedes behind the text without an opaque callout box.
 
 [Orion spacecraft (PDF)](gallery/orion.pdf)
 
+[![Orion spacecraft, axial view](gallery/previews/orion-axial.png)](gallery/orion-axial.pdf)
+
+[Orion spacecraft — axial view (PDF)](gallery/orion-axial.pdf)
+
 [![AGATA spherical honeycomb](gallery/previews/agata-honeycomb.png)](gallery/agata-honeycomb.pdf)
 
 [AGATA spherical honeycomb (PDF)](gallery/agata-honeycomb.pdf)
 
+[![AGATA spherical honeycomb, oblique view](gallery/previews/agata-honeycomb-oblique.png)](gallery/agata-honeycomb-oblique.pdf)
+
+[AGATA spherical honeycomb — oblique view (PDF)](gallery/agata-honeycomb-oblique.pdf)
+
 [![KEK ATF2 final-focus beamline](gallery/previews/atf2.png)](gallery/atf2.pdf)
 
 [KEK ATF2 final-focus beamline (PDF)](gallery/atf2.pdf)
+
+[![KEK ATF2 down-beam final-focus region](gallery/previews/atf2-downbeam.png)](gallery/atf2-downbeam.pdf)
+
+[KEK ATF2 — down-beam final-focus region (PDF)](gallery/atf2-downbeam.pdf)
 
 ## Commands
 
