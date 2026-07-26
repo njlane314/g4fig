@@ -14,6 +14,18 @@ The default rendering is a warm wireframe on white paper with depth fading and
 a soft fade at the canvas edge. Labels have feathered white halos so geometry
 recedes behind the text without an opaque callout box.
 
+## Gallery
+
+| [Orion spacecraft](gallery/orion.pdf) | [LDMX v15](gallery/ldmx-v15.pdf) |
+| :---: | :---: |
+| [![Orion spacecraft](gallery/previews/orion.png)](gallery/orion.pdf) | [![LDMX v15](gallery/previews/ldmx-v15.png)](gallery/ldmx-v15.pdf) |
+
+| [BepiColombo SIXS-P](gallery/sixs.pdf) | [PNPI charge-exchange apparatus](gallery/charge-exchange.pdf) |
+| :---: | :---: |
+| [![BepiColombo SIXS-P](gallery/previews/sixs.png)](gallery/sixs.pdf) | [![PNPI charge-exchange apparatus](gallery/previews/charge-exchange.png)](gallery/charge-exchange.pdf) |
+
+[Complete PDF gallery](gallery/gdml-gallery.pdf) · [Individual renders and provenance](gallery/)
+
 ## Commands
 
 ```text
