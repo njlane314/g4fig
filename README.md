@@ -20,6 +20,14 @@ geometry recedes behind the text without an opaque callout box.
 
 [Orion spacecraft (PDF)](gallery/orion.pdf)
 
+[![AGATA spherical honeycomb](gallery/previews/agata-honeycomb.png)](gallery/agata-honeycomb.pdf)
+
+[AGATA spherical honeycomb (PDF)](gallery/agata-honeycomb.pdf)
+
+[![KEK ATF2 final-focus beamline](gallery/previews/atf2.png)](gallery/atf2.pdf)
+
+[KEK ATF2 final-focus beamline (PDF)](gallery/atf2.pdf)
+
 ## Commands
 
 ```text
