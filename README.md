@@ -40,6 +40,49 @@ geometry recedes behind the text without an opaque callout box.
 
 [KEK ATF2 — down-beam final-focus region (PDF)](gallery/atf2-downbeam.pdf)
 
+[![Mu2e complete solenoid train](gallery/previews/mu2e-solenoid-train.png)](gallery/mu2e-solenoid-train.pdf)
+
+[Mu2e complete experiment — solenoid train (PDF)](gallery/mu2e-solenoid-train.pdf)
+
+[![Mu2e experimental hall cutaway](gallery/previews/mu2e-facility-cutaway.png)](gallery/mu2e-facility-cutaway.pdf)
+
+[Mu2e complete experiment — facility cutaway (PDF)](gallery/mu2e-facility-cutaway.pdf)
+
+[![TRex with Miniball, oblique view](gallery/previews/trex-miniball-oblique.png)](gallery/trex-miniball-oblique.pdf)
+
+[TRex with Miniball — oblique view (PDF)](gallery/trex-miniball-oblique.pdf)
+
+[![LBNF focusing horn 3 detail](gallery/previews/lbnf-horn3-detail.png)](gallery/lbnf-horn3-detail.pdf)
+
+[LBNF focusing horn 3 detail (PDF)](gallery/lbnf-horn3-detail.pdf)
+
+[![GERDA and LEGEND-200 detector array, axial view](gallery/previews/l200-array-axial.png)](gallery/l200-array-axial.pdf)
+
+[GERDA / LEGEND-200 detector array — axial view (PDF)](gallery/l200-array-axial.pdf)
+
+[![BigTES cryogenic detector, oblique view](gallery/previews/bigtes-hero-oblique.png)](gallery/bigtes-hero-oblique.pdf)
+
+[BigTES cryogenic detector — oblique view (PDF)](gallery/bigtes-hero-oblique.pdf)
+
+[![EJ-276D ORB neutron camera, oblique view](gallery/previews/neutron-camera-hero-oblique.png)](gallery/neutron-camera-hero-oblique.pdf)
+
+[EJ-276D ORB neutron camera — oblique view (PDF)](gallery/neutron-camera-hero-oblique.pdf)
+
+[![CBM RICH v13c, oblique view](gallery/previews/rich-hero-oblique.png)](gallery/rich-hero-oblique.pdf)
+
+[CBM RICH v13c — oblique view (PDF)](gallery/rich-hero-oblique.pdf)
+
+[![BDSIM single-pass beam transport, down-beam view](gallery/previews/bdsim-downbeam.png)](gallery/bdsim-downbeam.pdf)
+
+[BDSIM single-pass beam transport — down-beam view (PDF)](gallery/bdsim-downbeam.pdf)
+
+[![HPGe source geometry, oblique view](gallery/previews/hpge-hero-oblique.png)](gallery/hpge-hero-oblique.pdf)
+
+[HPGe source geometry — oblique view (PDF)](gallery/hpge-hero-oblique.pdf)
+
+See the [stacked detector and beamline gallery](gallery/detector-views.md) for
+all 31 views.
+
 ## Commands
 
 ```text
@@ -152,6 +195,35 @@ Pass any combination of `het`, `ephin`, `erne`, `ket`, and `sixs` to select
 instruments; with no argument the script renders all five. It pins and verifies
 the 71 required downloads without vendoring their source geometry. See the
 [stacked G4VM gallery](gallery/g4vm-views.md) for all 19 canonical views.
+
+## Example: Detector geometry suite
+
+Render the eight detector and beamline models selected above:
+
+```sh
+./examples/detectors/render.sh
+```
+
+Pass any combination of `trex`, `lbnf`, `l200`, `bigtes`,
+`neutron-camera`, `rich`, `bdsim`, and `hpge` to select models. The script
+downloads and verifies only the exact GDML files each model requires, then
+writes SVG, PDF, and PNG views beneath ignored `out/detectors/` directories.
+See the [stacked detector and beamline gallery](gallery/detector-views.md) for
+all 31 selected views.
+
+## Example: Mu2e complete experiment
+
+Render five facility, solenoid-train, and detector-system views from the full
+Mu2e v7.4.1 geometry used by the official 2019 Geometry Browser tutorial:
+
+```sh
+./examples/mu2e/render.sh
+```
+
+The script streams only the exact 5.0 MB GDML member from its pinned tutorial
+image layer, verifies it, and keeps all source and generated working files
+beneath ignored `out/mu2e/` directories. See the [stacked Mu2e
+gallery](gallery/mu2e-views.md).
 
 ## Track input
 

@@ -1,0 +1,2 @@
+model	image	tag	layer_digest	member	sha256	source_page	licence
+mu2e-v7.4.1	mu2e/user	tutorial_1-03	sha256:fb87d37d1862fa08d8fdc65c34294ea7b58c4abe905c1259e4dda06a19bec8f2	Tutorials_2019/GeometryBrowsing/mu2e_v7_4_1.gdml	83839a4a488a7f77f5b2cd25c3d091c09095298f2349b9b93c60e35da7e6eec1	https://mu2ewiki.fnal.gov/wiki/GeometryBrowserTutorial2019	Apache-2.0 generator; export has no embedded notice
