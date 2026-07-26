@@ -17,4 +17,5 @@ test "$(head -n 1 "$scratch/volumes.tsv")" = $'path\tphysical\tlogical\tmaterial
 test "$(head -c 4 "$scratch/view.svg")" = '<svg'
 grep -q 'mask="url(#mask-x)"' "$scratch/view.svg"
 grep -q 'filter="url(#paper-halo)"' "$scratch/view.svg"
+grep -q 'stroke="#ff5a1f"' "$scratch/view.svg"
 grep -q 'stroke="#2145f5"' "$scratch/view.svg"

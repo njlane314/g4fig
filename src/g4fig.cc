@@ -211,7 +211,7 @@ std::string ColourFor(const Options& options, const Metadata& metadata) {
         if (Matches(it->pattern, metadata))
             return it->value;
     }
-    return "#df6b45";
+    return "#ff5a1f";
 }
 
 std::string TrackColour(std::string_view particle) {

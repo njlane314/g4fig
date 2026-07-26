@@ -39,12 +39,12 @@ fi
   ./bin/g4fig \
     --size 1400x900 \
     --view 1,0.18,-0.16 \
-    --line-width 0.48 \
-    --depth-fade 0.88 \
+    --line-width 0.68 \
+    --depth-fade 0.82 \
     --fade 0.09 \
     --padding 0.07 \
-    --style 's2_orion=#e56f47' \
-    --style 's3_orion=#263f50' \
+    --style 's2_orion=#ff5a1f' \
+    --style 's3_orion=#0057ff' \
     --label 's2_orion=Orion spacecraft' \
     -o out/orion/orion.svg \
     out/orion/orion.gdml

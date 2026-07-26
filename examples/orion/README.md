@@ -17,9 +17,9 @@ out/orion/orion.png   # when rsvg-convert is installed
 ```
 
 The source contains two aluminium tessellated placements with about 53,700
-facets. The rendering uses a three-quarter orthographic view, stronger depth
-fading, a dark accent for the smaller mesh, and a paper halo behind the label.
-No geometry is rescaled or simplified.
+facets. The rendering uses a three-quarter orthographic view, vivid orange and
+electric-blue geometry, depth fading, and a paper halo behind the label. No
+geometry is rescaled or simplified.
 
 Sources:
 

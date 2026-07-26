@@ -10,9 +10,9 @@ g4fig --view 1,0.25,-0.12 --exclude 'rock|world' detector.gdml > beamline.svg
 g4fig --label 'target=Graphite target' detector.gdml > labelled.svg
 ```
 
-The default rendering is a warm wireframe on white paper with depth fading and
-a soft fade at the canvas edge. Labels have feathered white halos so geometry
-recedes behind the text without an opaque callout box.
+The default rendering is a vivid orange wireframe on white paper, with depth
+fading and a soft fade at the canvas edge. Labels have feathered white halos so
+geometry recedes behind the text without an opaque callout box.
 
 ## Gallery
 
