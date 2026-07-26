@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <define>
+    <position name="target_position" unit="mm" x="0" y="0" z="-300"/>
+    <position name="horn_position" unit="mm" x="0" y="0" z="250"/>
+  </define>
+  <materials>
+    <element name="N" formula="N" Z="7"><atom value="14.0067"/></element>
+    <element name="O" formula="O" Z="8"><atom value="15.999"/></element>
+    <material name="Air" state="gas">
+      <D value="0.001205" unit="g/cm3"/>
+      <fraction n="0.7" ref="N"/>
+      <fraction n="0.3" ref="O"/>
+    </material>
+    <material name="Graphite" Z="6"><D value="2.2" unit="g/cm3"/><atom value="12.011"/></material>
+    <material name="Aluminium" Z="13"><D value="2.7" unit="g/cm3"/><atom value="26.9815"/></material>
+  </materials>
+  <solids>
+    <box name="world_box" x="1800" y="1200" z="2600" lunit="mm"/>
+    <box name="target_box" x="45" y="45" z="700" lunit="mm"/>
+    <tube name="horn_tube" rmin="180" rmax="210" z="900" startphi="0" deltaphi="360" aunit="deg" lunit="mm"/>
+  </solids>
+  <structure>
+    <volume name="target_volume">
+      <materialref ref="Graphite"/>
+      <solidref ref="target_box"/>
+    </volume>
+    <volume name="horn_volume">
+      <materialref ref="Aluminium"/>
+      <solidref ref="horn_tube"/>
+    </volume>
+    <volume name="world_volume">
+      <materialref ref="Air"/>
+      <solidref ref="world_box"/>
+      <physvol name="target"><volumeref ref="target_volume"/><positionref ref="target_position"/></physvol>
+      <physvol name="horn"><volumeref ref="horn_volume"/><positionref ref="horn_position"/></physvol>
+    </volume>
+  </structure>
+  <setup name="default" version="1.0"><world ref="world_volume"/></setup>
+</gdml>

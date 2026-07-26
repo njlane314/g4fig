@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+image="${G4FIG_IMAGE:-g4fig:local}"
+
+if ! docker image inspect "$image" >/dev/null 2>&1; then
+  docker build --tag "$image" "$repo_root" >&2
+fi
+
+exec docker run --rm -i \
+  --volume "$PWD:/work" \
+  --workdir /work \
+  "$image" "$@"
