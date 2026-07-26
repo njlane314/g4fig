@@ -30,6 +30,17 @@ recorded in [`SOURCES.tsv`](SOURCES.tsv).
 
 ## Spacecraft and flight instruments
 
+- HIRAX X-ray-interferometer spacecraft — [all ten views](hirax-views.md)
+  - hero oblique — [PDF](hirax-hero-oblique.pdf) · [SVG](hirax-hero-oblique.svg)
+  - opposite rear — [PDF](hirax-opposite-rear.pdf) · [SVG](hirax-opposite-rear.svg)
+  - aft oblique — [PDF](hirax-aft-oblique.pdf) · [SVG](hirax-aft-oblique.svg)
+  - port profile — [PDF](hirax-port-profile.pdf) · [SVG](hirax-port-profile.svg)
+  - dorsal profile — [PDF](hirax-dorsal-profile.pdf) · [SVG](hirax-dorsal-profile.svg)
+  - forward axial — [PDF](hirax-forward-axial.pdf) · [SVG](hirax-forward-axial.svg)
+  - plan — [PDF](hirax-plan.pdf) · [SVG](hirax-plan.svg)
+  - underside — [PDF](hirax-underside.pdf) · [SVG](hirax-underside.svg)
+  - collecting-mirror detail — [PDF](hirax-mirror-detail.pdf) · [SVG](hirax-mirror-detail.svg)
+  - detector bay — [PDF](hirax-detector-bay.pdf) · [SVG](hirax-detector-bay.svg)
 - Orion spacecraft
   - hero — [PDF](orion.pdf)
   - axial view — [PDF](orion-axial.pdf) · [SVG](orion-axial.svg)

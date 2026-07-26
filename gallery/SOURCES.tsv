@@ -1,5 +1,6 @@
 name	upstream	ref	upstream_path	local_path	local_sha256	license	note
 orion	https://geant4-data.web.cern.ch/datasets/examples/advanced/gorad/orion.gdml	2026-07-26	orion.gdml	orion.gdml	27d5f01c1393911309e69b65fe601f0ab9cf5e5e43b04bbb585f2e47783d425a	Geant4-Software-License-1.0	copied from the official Geant4 advanced-example dataset
+hirax	https://github.com/aditikatoch/HIRAX_Radiation_Model.git	6c9e38c71259acca6c093847c0abd964ab536e53	geometry/geometry_hirax.gdml	geometry_hirax.gdml	b8014e648007113d9aabb86151638fc7d028e5cfc74ec998a3410ccef118a624	MIT	copied standalone; schema validation disabled because the upstream XSD hint is local
 sixs	https://github.com/spearhead-he/G4VM.git	ef99820da246495c3acdd6602f84aff389befe56	SIXS/SIXS_v3.gdml	sixs.gdml	69e3dc07565fe783f2af866f947853f097798e631da58556fdb5f7a0738e550a	BSD-3-Clause	copied
 het	https://github.com/spearhead-he/G4VM.git	ef99820da246495c3acdd6602f84aff389befe56	HET/HET_shield.gdml	het.gdml	971cb5a5c679ac8cb3b1c6b2ac1a99ea04ebbfe2e9da6f7171ddf424f784c7ee	BSD-3-Clause	external XML entities inlined
 ephin-soho	https://github.com/spearhead-he/G4VM.git	ef99820da246495c3acdd6602f84aff389befe56	EPHIN/ephin_soho_shield.gdml	ephin-soho.gdml	7497dd0c191d13923435ea91c6cfc7d539c0ff7af518351bdb4eb8ac59d6e3fc	BSD-3-Clause	external XML entities inlined

@@ -113,6 +113,18 @@ This downloads and verifies the upstream GDML, then writes a labelled SVG and,
 when `rsvg-convert` is available, a PNG under `out/orion/`. See
 [`examples/orion/`](examples/orion/) for the exact camera and styling choices.
 
+## Example: HIRAX spacecraft
+
+Render ten whole-spacecraft, orthographic, axial, and instrument-detail views:
+
+```sh
+./examples/hirax/render.sh
+```
+
+The script downloads and verifies only the standalone HIRAX GDML, then writes
+SVG and, when `rsvg-convert` is available, matching PDF and PNG files under
+`out/hirax/`. See the [stacked HIRAX gallery](gallery/hirax-views.md).
+
 ## Track input
 
 Track rows are deliberately simple and pipe-friendly:
