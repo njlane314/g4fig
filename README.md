@@ -1,11 +1,14 @@
 # g4fig
 
-`g4fig` turns Geant4 GDML geometry into quiet, publication-ready SVG.
+`g4fig` turns Geant4 GDML geometry into quiet, publication-ready figures.
 It is a batch filter rather than an interactive event display: diagnostics go to
-standard error and SVG goes to standard output.
+standard error, SVG goes to standard output, and the self-contained wrapper can
+write SVG, PNG, or PDF according to the extension passed to `-o`.
 
 ```sh
 g4fig detector.gdml > detector.svg
+g4fig -o detector.pdf detector.gdml
+g4fig -o detector.png detector.gdml
 g4fig --view 1,0.25,-0.12 --exclude 'rock|world' detector.gdml > beamline.svg
 g4fig --label 'target=Graphite target' detector.gdml > labelled.svg
 ```
@@ -88,7 +91,7 @@ all 31 views.
 ```text
 g4fig [options] FILE.gdml
 
-  -o FILE                  write SVG to FILE instead of stdout
+  -o FILE                  write SVG, PNG, or PDF according to its extension
   --list                   list placed volumes as TSV instead of rendering
   --size WIDTHxHEIGHT      canvas size (default: 1200x675)
   --view X,Y,Z             direction from the scene toward the camera
@@ -104,6 +107,7 @@ g4fig [options] FILE.gdml
   --line-width NUMBER      geometry line width (default: 0.85)
   --padding FRACTION       fitted-geometry margin (default: 0.055)
   --sides NUMBER           curved-solid tessellation (default: 24)
+  --max-depth NUMBER       stop traversal at hierarchy depth
   --max-lines NUMBER       geometry-line safety limit (default: 1000000)
   --show-world             include the top-level world solid
   --aux-edges              include normally hidden tessellation edges
@@ -138,10 +142,15 @@ the GDML file:
 
 ```sh
 /path/to/g4fig/bin/g4fig detector.gdml > detector.svg
+/path/to/g4fig/bin/g4fig -o detector.pdf detector.gdml
+/path/to/g4fig/bin/g4fig -o detector.png detector.gdml
 ```
 
-It builds the pinned `g4fig:local` image on first use and mounts only the
-current directory at `/work`.
+It builds the pinned `g4fig:local` image on first use, refreshes older local
+images that lack these output formats, and mounts only the current directory at
+`/work`. SVG remains the native renderer format;
+`librsvg` conversion for `.png` and `.pdf` output is included in the image.
+A locally built C++ binary writes SVG, including when `-o` is used.
 
 ## Example: Orion spacecraft
 

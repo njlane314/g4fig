@@ -3,8 +3,11 @@ set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 image="${G4FIG_IMAGE:-g4fig:local}"
+expected_formats="svg,png,pdf"
 
-if ! docker image inspect "$image" >/dev/null 2>&1; then
+if ! docker image inspect "$image" >/dev/null 2>&1 ||
+   [[ -z "${G4FIG_IMAGE+x}" &&
+      "$(docker image inspect --format '{{ index .Config.Labels "io.g4fig.output-formats" }}' "$image" 2>/dev/null)" != "$expected_formats" ]]; then
   docker build --tag "$image" "$repo_root" >&2
 fi
 

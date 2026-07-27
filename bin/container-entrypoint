@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+renderer="${G4FIG_RENDERER:-/usr/local/libexec/g4fig-render}"
+converter="${G4FIG_CONVERTER:-rsvg-convert}"
+arguments=("$@")
+output=""
+output_index=-1
+list=false
+
+for ((index = 0; index < ${#arguments[@]}; ++index)); do
+  case "${arguments[index]}" in
+    -o)
+      if ((index + 1 < ${#arguments[@]})); then
+        output_index=$((index + 1))
+        output="${arguments[output_index]}"
+        ((++index))
+      fi
+      ;;
+    --list)
+      list=true
+      ;;
+  esac
+done
+
+# Listing is TSV, and an omitted or non-raster/vector output remains the native
+# SVG stream. Let the renderer retain ownership of argument validation.
+if "$list" || ((output_index < 0)); then
+  exec "$renderer" "${arguments[@]}"
+fi
+
+extension="${output##*.}"
+extension="${extension,,}"
+case "$extension" in
+  png | pdf) ;;
+  *) exec "$renderer" "${arguments[@]}" ;;
+esac
+
+if ! command -v "$converter" >/dev/null 2>&1; then
+  echo "g4fig: $converter is required for .$extension output" >&2
+  exit 127
+fi
+
+scratch_dir="$(mktemp -d "${TMPDIR:-/tmp}/g4fig.XXXXXX")"
+scratch_svg="$scratch_dir/render.svg"
+cleanup() {
+  rm -f "$scratch_svg"
+  rmdir "$scratch_dir"
+}
+trap cleanup EXIT
+
+arguments[output_index]="$scratch_svg"
+"$renderer" "${arguments[@]}"
+"$converter" --format "$extension" --output "$output" "$scratch_svg"

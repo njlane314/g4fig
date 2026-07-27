@@ -80,6 +80,7 @@ struct Options {
     bool list = false;
     bool showWorld = false;
     bool auxiliaryEdges = false;
+    int maxDepth = G4PhysicalVolumeModel::UNLIMITED;
     std::size_t maxLines = kDefaultMaxLines;
     std::vector<Rule> includes;
     std::vector<Rule> excludes;
@@ -522,7 +523,7 @@ void PrintHelp(std::ostream& output) {
               "Render Geant4 GDML as a publication-style SVG wireframe.\n"
               "SVG is written to stdout and diagnostics to stderr.\n"
               "\n"
-              "  -o FILE                  write SVG to FILE\n"
+              "  -o FILE                  write SVG (container: SVG, PNG, or PDF)\n"
               "  --list                   list placed volumes as TSV\n"
               "  --size WIDTHxHEIGHT      canvas size (1200x675)\n"
               "  --view X,Y,Z             direction from scene to camera\n"
@@ -538,6 +539,7 @@ void PrintHelp(std::ostream& output) {
               "  --line-width NUMBER      geometry line width (0.85)\n"
               "  --padding FRACTION       fitted geometry margin (0.055)\n"
               "  --sides NUMBER           curved-solid tessellation (24)\n"
+              "  --max-depth NUMBER       stop traversal at hierarchy depth\n"
               "  --max-lines NUMBER       safety limit (1000000)\n"
               "  --show-world             include the world solid\n"
               "  --aux-edges              include hidden mesh edges\n"
@@ -602,6 +604,11 @@ Options ParseArguments(int argc, char** argv) {
             if (options.sides < 8 || options.sides > 360) {
                 throw std::runtime_error("--sides must be between 8 and 360");
             }
+        } else if (argument == "--max-depth") {
+            const long long value = std::stoll(next(i, argument));
+            if (value < 0 || value > std::numeric_limits<int>::max())
+                throw std::runtime_error("--max-depth must be a non-negative integer");
+            options.maxDepth = static_cast<int>(value);
         } else if (argument == "--max-lines") {
             const long long value = std::stoll(next(i, argument));
             if (value < 1)
@@ -820,8 +827,7 @@ int main(int argc, char** argv) {
             throw std::runtime_error("GDML contains no world volume");
 
         G4ModelingParameters parameters;
-        G4PhysicalVolumeModel model(world, G4PhysicalVolumeModel::UNLIMITED, G4Transform3D(),
-                                    &parameters);
+        G4PhysicalVolumeModel model(world, options.maxDepth, G4Transform3D(), &parameters);
         CaptureScene scene(model, options);
         model.DescribeYourselfTo(scene);
 
